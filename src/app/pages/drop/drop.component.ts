@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-drop',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drop.component.css']
 })
 export class DropComponent implements OnInit {
+  public promos;
 
-  constructor() { }
+  constructor(private _data:DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getpromo();
   }
 
+  getpromo(){
+    this._data.doGET().subscribe(
+        data => { this.promos = data},
+        err => console.error(err),
+        () => console.log('done loading Promos')
+    );
+  }
 }

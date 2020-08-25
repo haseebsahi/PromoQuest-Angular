@@ -9,9 +9,14 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',       class: '' }, 
-    { path: '/maps',          title: 'Maps',              icon:'nc-pin-3',      class: '' },
-    { path: '/drop',          title: 'Drop',              icon:'nc-favourite-28',class: ''}
+    { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',           class: '' }, 
+    { path: '/maps',          title: 'Drop',              icon:'nc-pin-3',          class: '' },
+    { path: '/drop',          title: 'View Added Promos', icon:'nc-favourite-28',   class: ''},
+    { path: '#',              title: 'Players',           icon:'',                  class: ''},
+    { path: '/users',         title: 'Users',             icon:'nc-single-02',      class: ''},
+    { path: '/agencys',              title: 'Agencies',          icon:'nc-single-02',  class: ''},
+    { path: '#',      title: 'Packages',          icon:'nc-grid-45',        class: ''},
+    { path: '#',      title: 'Settings',          icon:'nc-settings-gear-64',  class: ''}
 ];
 
 @Component({

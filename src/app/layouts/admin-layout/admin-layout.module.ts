@@ -8,23 +8,21 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
 import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
-import { DropComponent } from '../../pages/drop/drop.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
+  declarations: [
+    DashboardComponent,
+    MapsComponent,
+    NotificationsComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     NgbModule
-  ],
-  declarations: [
-    DashboardComponent,
-    MapsComponent,
-    NotificationsComponent,
-    DropComponent
   ]
 })
 

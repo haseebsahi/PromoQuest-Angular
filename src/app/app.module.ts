@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from "ngx-toastr";
+import { HttpClientModule } from '@angular/common/http'
 
 import { SidebarModule } from './sidebar/sidebar.module';
 import { FooterModule } from './shared/footer/footer.module';
@@ -13,16 +14,22 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DropComponent } from './pages/drop/drop.component';
+import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './pages/users/users.component';
+import { AgencyComponent } from './pages/agency/agency.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    DropComponent
+    DropComponent,
+    UsersComponent,
+    AgencyComponent
   ],
   imports: [
     BrowserAnimationsModule,
+    HttpClientModule, FormsModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
